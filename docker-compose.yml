@@ -1,0 +1,15 @@
+version: '3'
+services:
+  server:
+    build: .
+    tty: true
+    volumes:
+      -  ./:/usr/share/socket
+    working_dir: "/usr/share/socket"
+
+  client:
+    build: .
+    tty: true
+    volumes:
+      -  ./:/usr/share/socket
+    working_dir: "/usr/share/socket"
